@@ -2,6 +2,7 @@ FROM centos:8
 
 ARG AWS_CLI_VERSION=2.1.24
 ARG AWS_SAM_CLI_VERSION=1.9.0
+ARG AWS_CFN_GUARD_VERSION=1.0.0
 
 #Essentials
 RUN dnf -y install epel-release git python3-setuptools python3-devel gcc gcc-c++ libtool zip which make zlib-devel openssl-devel libffi-devel jq
