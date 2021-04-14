@@ -1,4 +1,4 @@
-FROM python-38-centos7:latest
+FROM centos/python-38-centos7:latest
 
 ARG AWS_CLI_VERSION=2.1.24
 ARG AWS_SAM_CLI_VERSION=1.9.0
