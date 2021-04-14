@@ -16,8 +16,6 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-${AWS_CLI_VERSION
 
 RUN pip install setuptools wheel twine aws-sam-cli==${AWS_SAM_CLI_VERSION}
 
-RUN yum -y module install nodejs:12
-
 RUN yum install wget -y && \
     wget https://github.com/aws-cloudformation/cloudformation-guard/releases/download/${AWS_CFN_GUARD_VERSION}/cfn-guard-linux-${AWS_CFN_GUARD_VERSION}.tar.gz && \
     tar -xvf cfn-guard-linux-${AWS_CFN_GUARD_VERSION}.tar.gz && \
