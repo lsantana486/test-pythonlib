@@ -1,10 +1,14 @@
 FROM centos/python-38-centos7:latest
 
+USER root 
+
 ARG AWS_CLI_VERSION=2.1.24
 ARG AWS_SAM_CLI_VERSION=1.9.0
 ARG AWS_CFN_GUARD_VERSION=1.0.0
 
-RUN dnf -y install git zip which jq
+RUN yum install epel-release -y \
+   && yum update -y \
+   && yum install git zip which jq -y
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-${AWS_CLI_VERSION}.zip" -o "awscliv2.zip" \
     && unzip awscliv2.zip \
